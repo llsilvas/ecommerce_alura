@@ -11,6 +11,7 @@ import java.util.concurrent.ExecutionException;
 public class NewOrderMain {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
+        
         var producer = new KafkaProducer<String, String>(properties());
 
         var value = "12345,67890, 12345234523";
