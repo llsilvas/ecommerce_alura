@@ -31,7 +31,7 @@ public class FraudeDetectorService {
                     System.out.println(record.offset());
 
                     try{
-                        Thread.sleep(5000);
+                        Thread.sleep(1000);
                     }catch (InterruptedException e){
                         e.printStackTrace();
                     }
@@ -49,6 +49,7 @@ public class FraudeDetectorService {
         properties.setProperty(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         properties.setProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         properties.setProperty(ConsumerConfig.GROUP_ID_CONFIG, FraudeDetectorService.class.getSimpleName());
+        properties.setProperty(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, "1");
 
         return properties;
     }
