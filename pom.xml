@@ -26,6 +26,8 @@
         <module>service-order</module>
         <module>commons-kafka</module>
         <module>service-fraude</module>
+        <module>service-users</module>
+        <module>service-http</module>
     </modules>
 
     <dependencies>
